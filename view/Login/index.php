@@ -1,3 +1,11 @@
+<?php
+    require_once("../../config/conexion.php");
+    if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
+        require_once("../../models/Usuario.php");
+        $usuario = new Usuario();
+        $usuario->login();
+    }
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -33,14 +41,36 @@
                     <h3 class="mb-4"> AnderCode</h3>
                     <p>El lugar donde puedes aprender todo. </p>
                 </div>
-
+                <!--  End column one -->
                 <!-- column two -->
                 <div class="uk-card-default p-5 rounded">
+
                     <div class="mb-4 uk-text-center">
                         <h3 class="mb-0"> Bienvenido</h3>
                         <p class="my-2">Inicie sesión para administrar su cuenta.</p>
                     </div>
-                    <form>
+                    <form action="" method="post" id="login_form">
+                        <?php
+                            if (isset($_GET["m"])){
+                                switch($_GET["m"]){
+                                    case "1";
+                                    ?>
+                                        <div class="alert alert-danger text-center" role="alert">
+                                            Correo y/o Contraseña incorrectos.
+                                        </div>
+                                    <?php
+                                    break;
+
+                                    case "2";
+                                    ?>
+                                        <div class="alert alert-danger text-center" role="alert">
+                                            Los campos estan vacios.
+                                        </div>
+                                    <?php
+                                    break;
+                                }
+                            }
+                        ?>
 
                         <div class="uk-form-group">
                             <label class="uk-form-label"> Correo Electronico</label>
@@ -49,9 +79,9 @@
                                 <span class="uk-form-icon">
                                     <i class="icon-feather-mail"></i>
                                 </span>
-                                <input class="uk-input" type="email" placeholder="nombre@correo.com">
+                                <input class="uk-input" type="email" placeholder="nombre@correo.com" id="usu_correo" name="usu_correo">
                             </div>
-
+ 
                         </div>
 
                         <div class="uk-form-group">
@@ -61,7 +91,7 @@
                                 <span class="uk-form-icon">
                                     <i class="icon-feather-lock"></i>
                                 </span>
-                                <input class="uk-input" type="password" placeholder="********">
+                                <input class="uk-input" type="password" placeholder="********" id="usu_pass" name="usu_pass">
                             </div>
 
                         </div>
@@ -71,12 +101,14 @@
                                 <p> No tengo cuenta <a href="..\Register">Registrarse</a></p>
                             </div>
                             <div class="uk-width-auto@s">
+                                <input type="hidden" name="enviar" class="form-control" value="si">
                                 <button type="submit" class="btn btn-default">Acceder</button>
                             </div>
                         </div>
 
                     </form>
-                </div><!--  End column two -->
+                </div>
+                <!--  End column two -->
 
             </div>
         </div>
@@ -123,6 +155,9 @@
     <script src="..\..\assets\js\simplebar.js"></script>
     <script src="..\..\assets\js\main.js"></script>
     <script src="..\..\assets\js\bootstrap-select.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="text/javascript" src="login.js"></script>
 </body>
 
 </html>
