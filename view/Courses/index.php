@@ -425,196 +425,43 @@
                         <a href="#" class="btn-filter" uk-tooltip="title: Course Filter ; pos:  top-right" uk-toggle="target: #course-filter">
                             <i class="icon-feather-filter"></i>
                         </a>
+
                         <div class="display-as">
-                            <a href="#" uk-tooltip="title: Lista; pos: top-right">
+                            <a href="#" onClick="FilterCourses(1)" uk-tooltip="title: Lista; pos: top-right">
                                 <i class="icon-feather-grid"></i></a>
-                            <a href="#" class="active" uk-tooltip="title: Grilla; pos: top-right">
+                            <a href="#" onClick="FilterCourses(2)" uk-tooltip="title: Grilla; pos: top-right" class="active" >
                                 <i class="icon-feather-list"></i></a>
                         </div>
- 
-                        <select class="selectpicker ml-3">
-                            <option value="0"> Nuevos </option>
-                            <option value="1"> Populares</option>
-                        </select>
+
                     </div>
                 </div>
 
-                <div class="section-small">
-
-                    <div class="uk-child-width-1-4@m uk-child-width-1-3@s course-card-grid uk-grid-match" uk-grid="">
-                        <div><!-- 1 Angular-->
-                            <a href="1.html" target="_blank">
-                                <div class="course-card">
-                                    <div class="course-card-thumbnail ">
-                                        <img src="..\..\assets\images\course\angular.JPG">
-                                        <span class="play-button-trigger"></span>
-                                    </div>
-                                    <div class="course-card-body">
-                                        <div class="course-card-info">
-                                            <div>
-                                                <span class="catagroy">Angular</span>
-                                            </div>
-                                            <div>
-                                                <i class="icon-feather-bookmark icon-small"></i>
-                                            </div>
-                                        </div>
-                                        <h4>Curso Angular</h4>
-                                        <p>Crea tu curriculum online con angular y firebase .. </p>
-                                        <div class="course-card-footer">
-                                            <h5> <i class="icon-feather-film"></i> 5 Videos </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div><!-- 2 PHP SQL-->
-                            <a href="2.html" target="_blank">
-                                <div class="course-card">
-                                    <div class="course-card-thumbnail ">
-                                        <img src="..\..\assets\images\course\phpsql.JPG">
-                                        <span class="play-button-trigger"></span>
-                                    </div>
-                                    <div class="course-card-body">
-                                        <div class="course-card-info">
-                                            <div>
-                                                <span class="catagroy">PHP y SQL SERVER</span>
-                                            </div>
-                                            <div>
-                                                <i class="icon-feather-bookmark icon-small"></i>
-                                            </div>
-                                        </div>
-                                        <h4>PHP y SQL SERVER MVC </h4>
-                                        <p> Crea aplicaciones con PHP y SQL SERVER con MVC y JS... </p>
-                                        <div class="course-card-footer">
-                                            <h5> <i class="icon-feather-film"></i> 5 Videos </h5>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div><!-- 3 Git y GitHub-->
-                            <a href="3.html" target="_blank">
-                                <div class="course-card">
-                                    <div class="course-card-thumbnail ">
-                                        <img src="..\..\assets\images\course\git.JPG">
-                                        <span class="play-button-trigger"></span>
-                                    </div>
-                                    <div class="course-card-body">
-                                        <div class="course-card-info">
-                                            <div>
-                                                <span class="catagroy">Git y GitHub</span>
-                                            </div>
-                                            <div>
-                                                <i class="icon-feather-bookmark icon-small"></i>
-                                            </div>
-                                        </div>
-                                        <h4>Curso de Git y Github</h4>
-                                        <p> Realizar el versionamiento de codigo en tus proyectos...</p>
-                                        <div class="course-card-footer">
-                                            <h5> <i class="icon-feather-film"></i> 3 Videos </h5>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div><!-- 4 PHP MYSQL-->
-                            <a href="4.html" target="_blank">
-                                <div class="course-card">
-                                    <div class="course-card-thumbnail ">
-                                        <img src="..\..\assets\images\course\phpmysql.JPG">
-                                        <span class="play-button-trigger"></span>
-                                    </div>
-                                    <div class="course-card-body">
-                                        <div class="course-card-info">
-                                            <div>
-                                                <span class="catagroy">PHP y MySQL</span>
-                                            </div>
-                                            <div>
-                                                <i class="icon-feather-bookmark icon-small"></i>
-                                            </div>
-                                        </div>
-                                        <h4>Curso PHP y MySql</h4>
-                                        <p> Realizar un control documentario Online...</p>
-                                        <div class="course-card-footer">
-                                            <h5> <i class="icon-feather-film"></i> 14 Videos </h5>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div><!-- 5 Html5-->
-                            <a href="5.html" target="_blank">
-                                <div class="course-card">
-                                    <div class="course-card-thumbnail">
-                                        <img src="..\..\assets\images\course\html5.jpg">
-                                        <span class="play-button-trigger"></span>
-                                    </div>
-                                    <div class="course-card-body">
-                                        <div class="course-card-info">
-                                            <div>
-                                                <span class="catagroy">Dashboard HTML</span>
-                                            </div>
-                                            <div>
-                                                <i class="icon-feather-bookmark icon-small"></i>
-                                            </div>
-                                        </div>
-                                        <h4>Templates HTML</h4>
-                                        <p> Descarga los mejores templates HTML para tus proyectos...</p>
-                                        <div class="course-card-footer">
-                                            <h5> <i class="icon-feather-film"></i> 4 Videos </h5>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div><!-- 6 Laravel-->
-                            <a href="6.html" target="_blank">
-                                <div class="course-card">
-                                    <div class="course-card-thumbnail ">
-                                        <img src="..\..\assets\images\course\laravel.JPG">
-                                        <span class="play-button-trigger"></span>
-                                    </div>
-                                    <div class="course-card-body">
-                                        <div class="course-card-info">
-                                            <div>
-                                                <span class="catagroy">Dashboard Laravel</span>
-                                            </div>
-                                            <div>
-                                                <i class="icon-feather-bookmark icon-small"></i>
-                                            </div>
-                                        </div>
-                                        <h4>Templates Laravel</h4>
-                                        <p> Aprende a migrar cualquier template a LARAVEL...</p>
-                                        <div class="course-card-footer">
-                                            <h5> <i class="icon-feather-film"></i> 2 Videos </h5>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
+                <div class="section-header mb-4">
+                    <div class="section-header-left">
+                        <nav class="responsive-tab style-4">
+                            <ul>
+                                <li class="uk-active"><a href="#">Mas Popular</a></li>
+                                <li><a href="#">Basico</a></li>
+                                <li><a href="#">Intermedio </a></li>
+                                <li><a href="#">Avanzado</a></li>
+                            </ul>
+                        </nav>
                     </div>
+                </div>
+
+                <div id="divlistcourses">
+
                 </div>
 
                 <div id="course-filter" uk-offcanvas="flip: true; overlay: true">
                     <div class="uk-offcanvas-bar">
-
                         <button class="uk-offcanvas-close" type="button" uk-close=""></button>
-
                         <div class="sidebar-filter">
-
                             <div class="sidebar-filter-contents">
-
                                 <h4> Filtrar Por </h4>
-
                                 <ul class="sidebar-filter-list" uk-accordion="multiple: true">
-
                                     <li class="uk-open">
-                                        <a class="uk-accordion-title" href="#"> Skill Levels </a>
+                                        <a class="uk-accordion-title" href="#"> Categoria </a>
                                         <div class="uk-accordion-content">
                                             <div class="uk-form-controls">
                                                 <label>
@@ -628,46 +475,6 @@
                                                 <label>
                                                     <input class="uk-radio" type="radio" name="radio1">
                                                     <span class="test"> Expert <span> (6) </span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="uk-open">
-                                        <a class="uk-accordion-title" href="#"> Tipo de Curso </a>
-                                        <div class="uk-accordion-content">
-                                            <div class="uk-form-controls">
-                                                <label>
-                                                    <input class="uk-radio" type="radio" name="radio2">
-                                                    <span class="test"> Free (42) </span>
-                                                </label>
-                                                <label>
-                                                    <input class="uk-radio" type="radio" name="radio2">
-                                                    <span class="test"> Paid </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="uk-open">
-                                        <a class="uk-accordion-title" href="#"> Duration time </a>
-                                        <div class="uk-accordion-content">
-                                            <div class="uk-form-controls">
-                                                <label>
-                                                    <input class="uk-radio" type="radio" name="radio3">
-                                                    <span class="test"> +5 Hourse (23) </span>
-                                                </label>
-                                                <label>
-                                                    <input class="uk-radio" type="radio" name="radio3">
-                                                    <span class="test"> +10 Hourse (12)</span>
-                                                </label>
-                                                <label>
-                                                    <input class="uk-radio" type="radio" name="radio3">
-                                                    <span class="test"> +20 Hourse (5)</span>
-                                                </label>
-                                                <label>
-                                                    <input class="uk-radio" type="radio" name="radio3">
-                                                    <span class="test"> +30 Hourse (2)</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -696,10 +503,12 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
     <?php require_once("../MainJs/mainjs.php");?>
+    <script type="text/javascript" src="courses.js"></script>
 </body>
 </html>
