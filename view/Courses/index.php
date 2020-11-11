@@ -20,7 +20,7 @@
                         <nav id="breadcrumbs">
                             <ul>
                                 <li><a href="#"> Dashboard </a></li>
-                                <li><a href="#">Cursos</a></li>
+                                <li><a href="#"> Cursos </a></li>
                                 <li>Explorar Cursos</li>
                             </ul>
                         </nav>
@@ -427,9 +427,10 @@
                         </a>
 
                         <div class="display-as">
-                            <a href="#" onClick="FilterCourses(1)" uk-tooltip="title: Lista; pos: top-right">
+                            <input type="hidden" id="txtfiltro" name="txtfiltro">
+                            <a href="#" id="afiltro1" onClick="FilterCourses(1)" uk-tooltip="title: Grilla; pos: top-right" class="active">
                                 <i class="icon-feather-grid"></i></a>
-                            <a href="#" onClick="FilterCourses(2)" uk-tooltip="title: Grilla; pos: top-right" class="active" >
+                            <a href="#" id="afiltro2" onClick="FilterCourses(2)" uk-tooltip="title: Lista; pos: top-right">
                                 <i class="icon-feather-list"></i></a>
                         </div>
 
@@ -440,10 +441,11 @@
                     <div class="section-header-left">
                         <nav class="responsive-tab style-4">
                             <ul>
-                                <li class="uk-active"><a href="#">Mas Popular</a></li>
-                                <li><a href="#">Basico</a></li>
-                                <li><a href="#">Intermedio </a></li>
-                                <li><a href="#">Avanzado</a></li>
+                                <input type="hidden" id="txtnivel" name="txtnivel">
+                                <li class="uk-active" id="lipopular"><a href="#" onClick="FilterCoursesNivel(1)">Mas Popular</a></li>
+                                <li id="libasico"><a href="#" onClick="FilterCoursesNivel(2)">Basico</a></li>
+                                <li id="liintermedio"><a href="#" onClick="FilterCoursesNivel(3)">Intermedio </a></li>
+                                <li id="liavanzado"><a href="#" onClick="FilterCoursesNivel(4)">Avanzado</a></li>
                             </ul>
                         </nav>
                     </div>

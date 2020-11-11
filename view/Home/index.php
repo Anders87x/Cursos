@@ -23,7 +23,7 @@
                             </button>
                         </span>
 
-                        <a href="index.html" class="logo">
+                        <a href="index.php" class="logo">
                             <i class=" uil-graduation-hat"></i>
                             <span> AnderCode</span>
                         </a>
