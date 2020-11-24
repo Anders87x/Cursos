@@ -15,7 +15,7 @@
                                 foreach($datos as $row){
                                     ?>
                                         <div>
-                                            <a href="1.html" target="_blank">
+                                            <a href="../Resume/?id=<?php echo $row['cur_id'];?>">
                                                 <div class="course-card">
                                                     <div class="course-card-thumbnail ">
                                                         <img src="..\..\assets\images\course\<?php echo $row['cur_img'];?>">
@@ -93,7 +93,7 @@
                                 foreach($datos as $row){
                                     ?>
                                         <div>
-                                            <a href="1.html" target="_blank">
+                                            <a href="../Resume/?id=<?php echo $row['cur_id'];?>">
                                                 <div class="course-card">
                                                     <div class="course-card-thumbnail ">
                                                         <img src="..\..\assets\images\course\<?php echo $row['cur_img'];?>">
@@ -160,6 +160,44 @@
                 <?php
             }
         break;
+
+        case 'mostrar':
+            $datos=$cursos->get_cursos_x_id($_POST["cur_id"]);
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
+                {
+                    $output["cur_id"] = $row["cur_id"];
+                    $output["cur_titulo"] = $row["cur_titulo"];
+                    $output["cur_descripcion"] = $row["cur_descripcion"];
+                    $output["cur_descripcion_lar"] = $row["cur_descripcion_lar"];
+                    $output["cur_img"] = $row["cur_img"];
+                    $output["usu_id"] = $row["usu_id"];
+                    $output["usu_nom"] = $row["usu_nom"];
+                    $output["usu_ape"] = $row["usu_ape"];
+                    $output["usu_obs"] = $row["usu_obs"];
+                    $output["cat_id"] = $row["cat_id"];
+                    $output["cat_nom"] = $row["cat_nom"];
+                    $output["niv_nom"] = $row["niv_nom"];
+                }
+                echo json_encode($output);
+            } 
+        break;
+
+        case "listar_aprender":
+            $datos = $cursos->get_cursosaprender_x_cur_id($_POST["cur_id"]);
+            ?>
+                <?php
+                    foreach ($datos as $row) {
+                        ?>
+                            <li><?php echo $row['cura_nom'];?> </li>
+                        <?php
+                    }
+                ?>
+            <?php
+           
+        break;
+
+
     }
 
 ?>
