@@ -20,10 +20,19 @@ $(document).ready(function(){
         $('#lblusuario_obs').html(data.usu_obs);
 
         $("#lblimage").attr("src","../../assets/images/course/"+data.cur_img);
+
+        $("#lblusufoto").attr("src","../../assets/avatars/"+data.usu_foto);
+
+        $('#lblduracion').html('<i class="uil-youtube-alt"></i> '+data.curd_dura+' minutos');
+        $('#lblcantidad').html('<i class="uil-file-alt"></i> '+data.curd_total+' Videos');
     });
 
     $.post("../../controller/cursos.php?op=listar_aprender",{cur_id : cur_id}, function (data) {
         $('#lblaprender').html(data);
+    });
+
+    $.post("../../controller/cursos.php?op=listar_requerimiento",{cur_id : cur_id}, function (data) {
+        $('#lblrequerimiento').html(data);
     });
 
 

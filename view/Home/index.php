@@ -222,7 +222,6 @@
                                                     </span>
                                                 </span>
 
-                                                <!-- option menu -->
                                                 <span class="btn-option">
                                                     <i class="icon-feather-more-vertical"></i>
                                                 </span>
@@ -396,22 +395,22 @@
                             </div>
 
                             <a href="#" class="header-widget-icon profile-icon">
-                                <img src="..\..\assets\images\avatars\avatar-2.jpeg" alt="" class="header-profile-icon">
+                                <img src="..\..\assets\avatars\<?php echo $_SESSION["usu_foto"]?>" alt="" class="header-profile-icon">
                             </a>
 
                             <div uk-dropdown="pos: top-right ;mode:click" class="dropdown-notifications small">
-                                <!-- User Name / Avatar -->
+
                                 <a href="profile-1.html">
                                     <div class="dropdown-user-details">
                                         <div class="dropdown-user-avatar">
-                                            <img src="..\..\assets\images\avatars\avatar-5.jpeg" alt="">
+                                            <img src="..\..\assets\avatars\<?php echo $_SESSION["usu_foto"]?>" alt="">
                                         </div>
                                         <div class="dropdown-user-name">
                                             <?php echo $_SESSION["usu_nom"]?> <span>Estudiante</span>
                                         </div>
                                     </div>
                                 </a>
-                                <!-- User menu -->
+
                                 <ul class="dropdown-user-menu">
                                     <li>
                                         <a href="#">
@@ -441,15 +440,14 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- icon search-->
+
                         <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#">
                             <i class="uil-search icon-small"></i>
                         </a>
-                        <!-- User icons -->
+ 
                         <a href="#" class="uil-user icon-small uk-hidden@s" uk-toggle="target: .header-widget ; cls: is-active">
                         </a>
                     </div>
-                    <!-- End Right Side Content / End -->
 
                 </nav>
             </div>

@@ -443,10 +443,8 @@
                                 </div>
 
                                 <h4> Requerimientos </h4>
-                                <ul class="list-1">
-                                    <li>Any computer will work: Windows, macOS or Linux</li>
-                                    <li>Basic programming HTML and CSS.</li>
-                                    <li>Basic/Minimal understanding of JavaScript</li>
+                                <ul class="list-1" id="lblrequerimiento">
+                                   
                                 </ul>
                             </li>
 
@@ -455,7 +453,7 @@
 
                                 <div class="user-details-card">
                                     <div class="user-details-card-avatar">
-                                        <img src="..\..\assets\images\avatars\avatar-2.jpeg" alt="">
+                                        <img id="lblusufoto" alt="">
                                     </div>
                                     <div class="user-details-card-name" id="lblusuarionom">
    
@@ -744,12 +742,6 @@
 
                             <div class="p-3">
 
-                                <p class="my-3 text-center">
-                                    <span class="uk-h1"> $12.99 </span>
-                                    <s class="uk-h4 text-muted"> $19.99 </s>
-                                    <s class="uk-h6 ml-1 text-muted"> $32.99 </s>
-                                </p>
-
                                 <div class="uk-child-width-1-2 uk-grid-small mb-4" uk-grid="">
                                     <div>
                                         <a href="course-resume.html" class="uk-width-1-1 btn btn-default transition-3d-hover"> <i class="uil-play"></i> Iniciar </a>
@@ -763,10 +755,10 @@
 
                                 <div class="uk-child-width-1-2 uk-grid-small" uk-grid="">
                                     <div>
-                                        <span><i class="uil-youtube-alt"></i> 28 hours video</span>
+                                        <span id="lblduracion"><i class="uil-youtube-alt"></i> </span>
                                     </div>
                                     <div>
-                                        <span> <i class="uil-file-alt"></i> 12 Article </span>
+                                        <span id="lblcantidad"><i class="uil-file-alt"></i> </span>
                                     </div>
                                     <div>
                                         <span> <i class="uil-award"></i> Certificado </span>

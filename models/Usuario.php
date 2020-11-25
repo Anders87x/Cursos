@@ -1,6 +1,6 @@
 <?php
    class Usuario extends Conectar {
-		/* Listo */
+
 		public function login(){
 			$conectar=parent::Conexion();
 			parent::set_names();
@@ -24,6 +24,7 @@
 						$_SESSION["usu_id"] = $resultado["usu_id"];
 						$_SESSION["usu_nom"] = $resultado["usu_nom"];
 						$_SESSION["usu_ape"] = $resultado["usu_ape"];
+						$_SESSION["usu_foto"] = $resultado["usu_foto"];
 						$_SESSION["usu_correo"] = $resultado["usu_correo"];
 						header("Location:".Conectar::ruta()."view/Home/");
 						exit(); 
@@ -34,7 +35,7 @@
 				}
 			}
         }
-        /* Listo */
+
         public function insert_usuario($usu_nom,$usu_ape,$usu_correo,$usu_pass){
             $conectar= parent::conexion();
             parent::set_names();
@@ -46,7 +47,7 @@
 			$sql->bindValue(4,$usu_pass);
             $sql->execute();	
 		}
-		/* Listo */
+
 		public function get_correo_usuario($usu_correo){
             $conectar= parent::conexion();
             parent::set_names();

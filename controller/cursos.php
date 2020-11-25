@@ -171,9 +171,12 @@
                     $output["cur_descripcion"] = $row["cur_descripcion"];
                     $output["cur_descripcion_lar"] = $row["cur_descripcion_lar"];
                     $output["cur_img"] = $row["cur_img"];
+                    $output["curd_total"] = $row["curd_total"];
+                    $output["curd_dura"] = $row["curd_dura"];
                     $output["usu_id"] = $row["usu_id"];
                     $output["usu_nom"] = $row["usu_nom"];
                     $output["usu_ape"] = $row["usu_ape"];
+                    $output["usu_foto"] = $row["usu_foto"];
                     $output["usu_obs"] = $row["usu_obs"];
                     $output["cat_id"] = $row["cat_id"];
                     $output["cat_nom"] = $row["cat_nom"];
@@ -190,6 +193,20 @@
                     foreach ($datos as $row) {
                         ?>
                             <li><?php echo $row['cura_nom'];?> </li>
+                        <?php
+                    }
+                ?>
+            <?php
+           
+        break;
+
+        case "listar_requerimiento":
+            $datos = $cursos->get_cursosrequerimiento_x_cur_id($_POST["cur_id"]);
+            ?>
+                <?php
+                    foreach ($datos as $row) {
+                        ?>
+                            <li><?php echo $row['curr_nom'];?> </li>
                         <?php
                     }
                 ?>
