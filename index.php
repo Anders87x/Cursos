@@ -35,8 +35,7 @@
                             <ul id="responsive">
                                 <li><a href="index.php">Inicio</a> </li>
                                 <li><a href="view/Courses/" class="nav-active">Cursos</a> </li>
-                                <li><a href="#">Libros</a> </li>
-                                <li><a href="#">Blog</a> </li>
+                                <li><a href="view/Books/">Libros</a> </li>
                             </ul>
                         </nav>
                     </div>

@@ -4,11 +4,10 @@ function init(){
 
 $(document).ready(function(){
     var cur_id = getUrlParameter('id');
-    console.log(cur_id);
 
     $.post("../../controller/cursos.php?op=mostrar",{cur_id : cur_id}, function (data) {
         data = JSON.parse(data);
-        console.log(data);
+
         $('#lbltitulo1').html(data.cur_titulo);
         $('#lbltitulo2').html(data.cur_titulo);
         $('#lbldescripcion').html(data.cur_descripcion);
@@ -34,7 +33,6 @@ $(document).ready(function(){
     $.post("../../controller/cursos.php?op=listar_requerimiento",{cur_id : cur_id}, function (data) {
         $('#lblrequerimiento').html(data);
     });
-
 
 });
 

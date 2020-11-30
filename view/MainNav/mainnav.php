@@ -19,17 +19,17 @@
     <div class="side-nav-bg"></div>
 
     <div class="logo uk-visible@s">
-        <a href="index.html">
+        <a href="../Home/">
             <i class=" uil-graduation-hat"></i>
         </a>
     </div>
 
     <ul>
         <li>
-            <a href="#"> <i class="uil-book-alt"></i> <span class="tooltips"> Cursos</span> </a>
+            <a href="../Courses/"> <i class="uil-book-alt"></i> <span class="tooltips"> Cursos</span> </a>
         </li>
         <li>
-            <a href="#"> <i class="uil-book-alt"></i> <span class="tooltips"> Libros</span> </a>
+            <a href="../Books/"> <i class="uil-book-alt"></i> <span class="tooltips"> Libros</span> </a>
         </li>
         <li>
             <a href="#" uk-toggle="target: #searchbox; cls: is-active"><i class="uil-search-alt"></i></a>
