@@ -84,5 +84,16 @@
 			$sql->execute();
 			return $resultado=$sql->fetchAll();
         }
+
+        public function get_cursosdetalle_x_id($cur_id){
+            $conectar= parent::conexion();
+            parent::set_names();
+            $sql="SELECT * FROM tm_curso_detalle WHERE cur_id = ?";
+            $sql=$conectar->prepare($sql);
+            $sql->bindValue(1, $cur_id);
+            $sql->execute();
+			return $resultado=$sql->fetchAll();
+        }
+
    }
 ?>

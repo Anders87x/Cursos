@@ -214,6 +214,10 @@
            
         break;
 
+        case "listar_detalle":
+            
+        break;
+
 
     }
 
